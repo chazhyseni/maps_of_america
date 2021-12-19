@@ -1,16 +1,7 @@
-<html>
 
-<head>
-<title>Rayshader</title>
-</head>
+# Coming up with the best color palette for plotting the N. and S. American elevation rasters with the rayshader package
 
-<body>
-
-<p>
-  <b>Coming up with the best color palette for plotting the N. and S. American elevation rasters with the rayshader package
-  </b>
-</p>
-<!--begin.rcode, message=FALSE, warning=FALSE, eval=FALSE
+```{r, message=FALSE, warning=FALSE, eval=FALSE}
 ###required packages
 if (!require("tidyverse")) install.packages("tidyverse")
 if (!require("sp")) install.packages("sp")
@@ -53,52 +44,46 @@ americas.mat[is.na(americas.mat)]=0
 americas.mat <- round(americas.mat,0)
 
 
-end.rcode-->
 
-<p>v.1</p>
+```
 
-<!--begin.rcode, v1, fig.width=25, fig.height=33, eval=FALSE, message=FALSE
+## v.1
+
+```{r, v1, fig.width=25, fig.height=33, eval=FALSE, message=FALSE}
 americas.mat %>% 
   sphere_shade(texture = create_texture(lightcolor = rokt[3], shadowcolor = rokt[21], leftcolor = rokt[9], rightcolor = rokt[15], centercolor = mak[8]), sunangle=225) %>% 
   add_water(detect_water(americas.mat, cutoff = 0.95), color = "steelblue3") %>% 
   plot_map()
+```
 
-end.rcode-->
-
-<!--begin.rcode out.width="90%", echo=FALSE, eval=TRUE 
+```{r, out.width="90%", echo=FALSE, eval=TRUE} 
 knitr::include_graphics("figure/v1-1.png")
-end.rcode-->
+```
 
 
-<p>v.2</p>
+## v.2
 
-<!--begin.rcode, v2, fig.width=25, fig.height=33, eval=FALSE, message=FALSE
+```{r, v2, fig.width=25, fig.height=33, eval=FALSE, message=FALSE}
 americas.mat %>% 
   sphere_shade(texture = create_texture(lightcolor = virds[3], shadowcolor = virds[21], leftcolor = virds[9], rightcolor = virds[15], centercolor = mak[8]), sunangle=225) %>% 
   add_water(detect_water(americas.mat, cutoff = 0.95), color = "steelblue3") %>% 
   plot_map()
+```
 
-end.rcode-->
-
-<!--begin.rcode out.width="90%", echo=FALSE, eval=TRUE 
+```{r, out.width="90%", echo=FALSE, eval=TRUE} 
 knitr::include_graphics("figure/v2-1.png")
-end.rcode-->
+```
 
+## v.3
 
-<p>v.3</p>
-
-<!--begin.rcode, v3, fig.width=25, fig.height=33, eval=FALSE, message=FALSE
+```{r, v3, fig.width=25, fig.height=33, eval=FALSE, message=FALSE}
 americas.mat %>% 
   sphere_shade(texture = create_texture(lightcolor = rokt[3], shadowcolor = rokt[21], leftcolor = virds[9], rightcolor = virds[15], centercolor = mak[8]), sunangle=225) %>% 
   add_water(detect_water(americas.mat, min_area = 200), color = "steelblue3") %>% 
   plot_map()
+```
 
-end.rcode-->
-
-<!--begin.rcode out.width="90%", echo=FALSE, eval=TRUE 
+```{r, out.width="90%", echo=FALSE, eval=TRUE} 
 knitr::include_graphics("figure/v3-1.png")
-end.rcode-->
+```
 
-
-</body>
-</html>
