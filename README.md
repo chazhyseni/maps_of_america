@@ -59,7 +59,7 @@ americas.mat %>%
   add_water(detect_water(americas.mat, cutoff = 0.95), color = "steelblue3") %>% 
   plot_map()
 ```
-![](v1-1.png)
+![](rayshader/v1-1.png)
 
 
 
@@ -75,7 +75,7 @@ americas.mat %>%
   add_water(detect_water(americas.mat, cutoff = 0.95), color = "steelblue3") %>% 
   plot_map()
 ```
-![](v2-1.png)
+![](rayshader/v2-1.png)
 
 ## v.3
 
@@ -89,5 +89,5 @@ americas.mat %>%
   add_water(detect_water(americas.mat, min_area = 200), color = "steelblue3") %>% 
   plot_map()
 ```
-![](v3-1.png)
+![](rayshader/v3-1.png)
 
