@@ -51,7 +51,11 @@ americas.mat <- round(americas.mat,0)
 
 ```{r, v1, fig.width=25, fig.height=33, eval=FALSE, message=FALSE}
 americas.mat %>% 
-  sphere_shade(texture = create_texture(lightcolor = rokt[3], shadowcolor = rokt[21], leftcolor = rokt[9], rightcolor = rokt[15], centercolor = mak[8]), sunangle=225) %>% 
+  sphere_shade(texture = create_texture(lightcolor = rokt[3], 
+                                        shadowcolor = rokt[21], 
+                                        leftcolor = rokt[9], 
+                                        rightcolor = rokt[15], 
+                                        centercolor = mak[8]), sunangle=225) %>% 
   add_water(detect_water(americas.mat, cutoff = 0.95), color = "steelblue3") %>% 
   plot_map()
 ```
@@ -63,7 +67,11 @@ americas.mat %>%
 
 ```{r, v2, fig.width=25, fig.height=33, eval=FALSE, message=FALSE}
 americas.mat %>% 
-  sphere_shade(texture = create_texture(lightcolor = virds[3], shadowcolor = virds[21], leftcolor = virds[9], rightcolor = virds[15], centercolor = mak[8]), sunangle=225) %>% 
+  sphere_shade(texture = create_texture(lightcolor = virds[3], 
+                                        shadowcolor = virds[21], 
+                                        leftcolor = virds[9], 
+                                        rightcolor = virds[15], 
+                                        centercolor = mak[8]), sunangle=225) %>% 
   add_water(detect_water(americas.mat, cutoff = 0.95), color = "steelblue3") %>% 
   plot_map()
 ```
@@ -73,7 +81,11 @@ americas.mat %>%
 
 ```{r, v3, fig.width=25, fig.height=33, eval=FALSE, message=FALSE}
 americas.mat %>% 
-  sphere_shade(texture = create_texture(lightcolor = rokt[3], shadowcolor = rokt[21], leftcolor = virds[9], rightcolor = virds[15], centercolor = mak[8]), sunangle=225) %>% 
+  sphere_shade(texture = create_texture(lightcolor = rokt[3], 
+                                        shadowcolor = rokt[21], 
+                                        leftcolor = virds[9], 
+                                        rightcolor = virds[15], 
+                                        centercolor = mak[8]), sunangle=225) %>% 
   add_water(detect_water(americas.mat, min_area = 200), color = "steelblue3") %>% 
   plot_map()
 ```
