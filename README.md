@@ -55,10 +55,8 @@ americas.mat %>%
   add_water(detect_water(americas.mat, cutoff = 0.95), color = "steelblue3") %>% 
   plot_map()
 ```
+![](v1-1.png)
 
-```{r, out.width="90%", echo=FALSE, eval=TRUE} 
-knitr::include_graphics("figure/v1-1.png")
-```
 
 
 ## v.2
@@ -69,10 +67,7 @@ americas.mat %>%
   add_water(detect_water(americas.mat, cutoff = 0.95), color = "steelblue3") %>% 
   plot_map()
 ```
-
-```{r, out.width="90%", echo=FALSE, eval=TRUE} 
-knitr::include_graphics("figure/v2-1.png")
-```
+![](v2-1.png)
 
 ## v.3
 
@@ -82,8 +77,5 @@ americas.mat %>%
   add_water(detect_water(americas.mat, min_area = 200), color = "steelblue3") %>% 
   plot_map()
 ```
-
-```{r, out.width="90%", echo=FALSE, eval=TRUE} 
-knitr::include_graphics("figure/v3-1.png")
-```
+![](v3-1.png)
 
